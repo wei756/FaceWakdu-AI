@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "BM DoHyeon";
+    src: url("BMDoHyeon.woff2") format("woff2"),
+        url("BMDoHyeon.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "BM DoHyeon";
+    background: #d7a769;
+    margin: 0;
+    padding: 0;
+}
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: -10000px 0;
+    }
+}
+.hide {
+    display: none;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    background: url("./wak.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 200;
+    /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#main-container {
+    background: #fff;
+    max-width: 480px;
+    margin: auto;
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    -khtml-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+button {
+    background: #3c6cff;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: none;
+    box-shadow: 1px 2px 3px 0px #aaa;
+    border-radius: 12px;
+    -khtml-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    color: white;
+    font-size: large;
+    transition: box-shadow 0.2s;
+}
+button:hover {
+    box-shadow: 1px 2px 6px 1px #aaa;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+#loader-container {
+    padding: 16px;
+}
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3c6cff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.4s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.file-input {
+    color: transparent;
+    width: 120px;
+    height: 40px;
+    margin-top: 24px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.file-input::before {
+    width: inherit;
+    height: inherit;
+    content: "사진 선택";
+    color: black;
+    display: block;
+    font-family: "BM DoHyeon";
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.file-input:hover::before {
+    border-color: black;
+}
+.file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+#result-container {
+}
+#result-name {
+    font-size: 34px;
+    font-weight: 500;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+#result-perc {
+    font-size: 20px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-bottom: 16px;
+}
+#Result {
+    max-width: 70%;
+    height: auto;
+    width: auto\9;
+}
+
+#label-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.entry {
+    display: flex;
+    width: 308px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    padding: 8px 12px 8px 8px;
+    box-shadow: 1px 2px 3px 0px #aaa;
+    border-radius: 16px;
+    -khtml-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+}
+.entry img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.entry .box_label {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+.entry .label {
+    font-size: 17px;
+}
+.entry .perc {
+    padding-top: 0px;
+    font-size: 17px;
+    color: #0007;
+}
+progress {
+    width: 200px;
+    height: 8px;
+    border-radius: 8px;
+    -khtml-border-radius: 8px;
+    margin: 0px;
+}
+progress::-webkit-progress-bar {
+    -webkit-border-radius: 8px;
+    background-color: #6ec6ff;
+}
+progress::-webkit-progress-value {
+    -webkit-border-radius: 8px;
+    background-color: #2196f3;
+}
+progress::-moz-progress-bar {
+    -moz-border-radius: 8px;
+}
+progress {
+    border-radius: 8px;
+    -khtml-border-radius: 8px;
+}
