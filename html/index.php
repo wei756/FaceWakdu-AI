@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>닮은꼴 왁두 사이트</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159115757-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-159115757-3');
-    </script>
     <?php
 		$cssVer = date("YmdHis",filemtime($_SERVER["DOCUMENT_ROOT"].'/css/style.css'));
 		$css = '<link rel="stylesheet" href="/css/style.css?ver='.$cssVer.'" type="text/css" />';
